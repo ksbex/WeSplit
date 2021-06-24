@@ -57,10 +57,9 @@ struct ContentView: View {
                 
                 Section(header: Text("Total Bill")) {
                     Text("$\(grandTotal, specifier: "%.2f")")
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        
+                                                
                         // Day 24 Challenge 2
-                        .background(tipPercentage == 4 ? Color.red : Color.white)
+                        .foregroundColor(tipPercentage == 4 ? Color.red : Color.black)
                         
                     
                 }
@@ -68,6 +67,7 @@ struct ContentView: View {
                 
                 Section(header: Text("Amount per person")) {
                     Text("$\(totalPerPerson, specifier: "%.2f")")
+                        
                 }
             }
             .navigationBarTitle("WeSplit")
